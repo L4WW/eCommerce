@@ -38,7 +38,7 @@ public class ProductsController {
 	public void delete(@PathVariable int id) {
 		this.productService.delete(id);
 	}
-	@GetMapping
+	@GetMapping("/getall")
 	public List<GetAllProductsResponse> getAll() {
 		
 		return productService.getAll();
