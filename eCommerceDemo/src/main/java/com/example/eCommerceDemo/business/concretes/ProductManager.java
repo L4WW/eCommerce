@@ -18,8 +18,8 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 public class ProductManager implements ProductService {
-	private ModelMapperService modelMapperService;
-	private ProductRepository productRepository;
+	private final ModelMapperService modelMapperService;
+	private final ProductRepository productRepository;
 	@Override
 	public void add(CreateProductRequest createProductRequest) {
 		

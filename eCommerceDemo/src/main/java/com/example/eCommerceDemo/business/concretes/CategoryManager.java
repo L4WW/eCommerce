@@ -18,8 +18,8 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 public class CategoryManager implements CategoryService {
-	private ModelMapperService modelMapperService;
-	private CategoryRepository categoryRepository;
+	private final ModelMapperService modelMapperService;
+	private final CategoryRepository categoryRepository;
 
 	@Override
 	public void delete(int id) {

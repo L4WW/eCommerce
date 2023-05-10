@@ -25,11 +25,11 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/api/products")
 @AllArgsConstructor
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000/")
 public class ProductsController {
-	private ProductService productService;
+	private final ProductService productService;
 	
-	@PostMapping
+	@PostMapping("/add")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public void add(@Valid @RequestBody CreateProductRequest createProductRequest) {
 		this.productService.add(createProductRequest);

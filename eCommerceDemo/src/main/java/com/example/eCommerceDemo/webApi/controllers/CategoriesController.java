@@ -27,7 +27,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @CrossOrigin
 public class CategoriesController {
-	private CategoryService categoryService;
+	private final CategoryService categoryService;
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public void add(@Valid @RequestBody CreateCategoryRequest createCategoryRequest) {
